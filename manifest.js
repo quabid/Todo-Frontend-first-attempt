@@ -2,6 +2,7 @@ import inert from '@hapi/inert';
 import handlebars from 'handlebars';
 import home from './home/index.js';
 import signup from './signup/index.js';
+import registration from './signupform/index.js';
 import Path from 'path';
 
 const __dirname = Path.resolve('.');
@@ -32,6 +33,9 @@ const manifest = {
 					partialsPath: 'views/partials',
 					helpersPath: 'views/helpers'
 				}
+			},
+			{
+				plugin: registration
 			},
 			{
 				plugin: home

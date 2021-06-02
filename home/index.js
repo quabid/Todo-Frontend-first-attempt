@@ -11,7 +11,7 @@ const home = {
 				directory: {
 					path: __dirname + '/public',
 					listing: false,
-					index: false
+					index: true
 				}
 			}
 		});
