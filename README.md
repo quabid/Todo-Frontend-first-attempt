@@ -12,6 +12,6 @@ _A NodeJS todo app; backend Express, frontend React, datastore CouchDB_
   - @hapi/inert: 6.0.3,
   - joi: 17.4.0
 
-#### Insallation
+#### Installation
 
 _Clone this repository or download the zip, then extract._
