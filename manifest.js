@@ -1,5 +1,6 @@
 import inert from "@hapi/inert";
 import home from "./home/index.js";
+import signup from "./signup/index.js";
 import Path from "path";
 
 const __dirname = Path.resolve();
@@ -20,6 +21,9 @@ const manifest = {
       },
       {
         plugin: home,
+      },
+      {
+        plugin: signup,
       },
     ],
   },
