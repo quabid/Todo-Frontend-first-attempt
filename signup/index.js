@@ -11,9 +11,15 @@ const signupform = {
 						email: Joi.string().email().required(),
 						pwd1: Joi.string().min(6).label('Password ').required(),
 						pwd2: Joi.string().valid(Joi.ref('pwd1')).label("Passwords don't match").required(),
-						fname: Joi.string().required(),
-						lname: Joi.string().required(),
-						gender: Joi.string().required()
+						fname: Joi.string()
+							.pattern(/^[a-zA-Z]+$/)
+							.label('First name must contain letters only')
+							.required(),
+						lname: Joi.string()
+							.pattern(/^[a-zA-Z]+$/)
+							.label('Last name must contain letters only')
+							.required(),
+						gender: Joi.string().pattern(/^[a-zA-Z]+$/).label('Gender must contain letters only').required()
 					}),
 					failAction: (req, res, err) => {
 						throw err;
