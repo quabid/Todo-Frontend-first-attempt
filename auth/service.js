@@ -2,7 +2,7 @@ import axios from 'axios';
 const signinUrl = process.env.USER_LOGIN;
 
 export const validate = async (req, email, password, res) => {
-	let obj = {};
+	let obj = { isValid: false, credentials: null };
 	axios({
 		url: 'http://192.168.1.71:4000/auth/signin',
 		method: 'post',
