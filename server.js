@@ -17,7 +17,7 @@ const startServer = async function() {
 		console.clear();
 		console.log(`\n\n\t\tServer started on port ${manifest.server.port}\n\n`);
 	} catch (err) {
-		console.error(err);
+		console.error(err.status);
 		process.exit(1);
 	}
 };

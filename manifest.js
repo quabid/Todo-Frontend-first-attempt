@@ -1,10 +1,14 @@
 import inert from '@hapi/inert';
 import handlebars from 'handlebars';
+import dotenv from 'dotenv';
+import auth from './auth/index.js';
 import home from './home/index.js';
 import signup from './signup/index.js';
 import signin from './signin/index.js';
 import signupform from './signupform/index.js';
 import Path from 'path';
+
+dotenv.config();
 
 const __dirname = Path.resolve('.');
 
@@ -36,6 +40,12 @@ const manifest = {
 				}
 			},
 			{
+				plugin: auth
+			},
+			{
+				plugin: signin
+			},
+			{
 				plugin: home
 			},
 			{
@@ -43,9 +53,6 @@ const manifest = {
 			},
 			{
 				plugin: signupform
-			},
-			{
-				plugin: signin
 			}
 		]
 	}
