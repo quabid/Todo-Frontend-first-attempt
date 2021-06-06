@@ -26,6 +26,9 @@ const manifest = {
 				plugin: inert
 			},
 			{
+				plugin: auth
+			},
+			{
 				plugin: '@hapi/vision',
 				options: {
 					engines: {
@@ -37,9 +40,6 @@ const manifest = {
 					partialsPath: 'views/partials',
 					helpersPath: 'views/helpers'
 				}
-			},
-			{
-				plugin: auth
 			},
 			{
 				plugin: signin

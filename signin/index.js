@@ -6,6 +6,7 @@ const signin = {
 			method: 'POST',
 			path: '/signin',
 			config: {
+				// auth: 'simple',
 				validate: {
 					payload: Joi.object({
 						email: Joi.string().email().required(),
@@ -14,7 +15,7 @@ const signin = {
 					failAction: (req, res, err) => {
 						console.log(err.message);
 						// throw err.message;
-						return res.view('signin', { title: 'Sign In', error: err.message });
+						return res.view('landing/signin', { title: 'Sign In', error: err.message });
 					}
 				}
 			},
@@ -26,8 +27,11 @@ const signin = {
 		server.route({
 			method: 'GET',
 			path: '/signin',
+			config: {
+				// auth: 'simple'
+			},
 			handler: (req, res) => {
-				return res.view('signin', { title: 'Sign In' });
+				return res.view('landing/signin', { title: 'Sign In' });
 			}
 		});
 	},
