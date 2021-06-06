@@ -1,1 +1,27 @@
-<h2 class="text-center">Sign Up</h2>
+<form class="grid-container fluid cell auto" style="position: absolute;top:50%;width:100%;" method="post"
+    action="/signin">
+    <div class="cell auto">
+        <label>
+            <h3>
+                Email
+            </h3>
+        </label>
+        <input type="email" placeholder="Email" name="email" required>
+    </div>
+
+    <div class="cell auto">
+        <label>
+            <h3>Password</h3>
+        </label>
+        <input type="password" placeholder="Password" name="pwd1" required>
+    </div>
+
+    <div class="cell auto">
+        <label>
+            <h3>Confirm Password</h3>
+        </label>
+        <input type="password" placeholder="Confirm password" name="pwd2" required>
+    </div>
+
+    <input type="submit" class="button primary" value="Submit">
+</form>

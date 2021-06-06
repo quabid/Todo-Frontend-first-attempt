@@ -6,7 +6,6 @@ const signin = {
 			method: 'POST',
 			path: '/signin',
 			config: {
-				auth: 'simple',
 				validate: {
 					payload: Joi.object({
 						email: Joi.string().email().required(),

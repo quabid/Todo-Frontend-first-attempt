@@ -4,7 +4,7 @@ const signupform = {
 	register: (server, options) => {
 		server.route({
 			method: [ 'POST' ],
-			path: '/register',
+			path: '/signup',
 			config: {
 				validate: {
 					payload: Joi.object({
@@ -28,6 +28,14 @@ const signupform = {
 			},
 			handler: (req, res) => {
 				return req.payload;
+			}
+		});
+
+		server.route({
+			method: 'GET',
+			path: '/signup',
+			handler: (req, res) => {
+				return res.view('landing/signup', { title: 'Sign Up' });
 			}
 		});
 	},
