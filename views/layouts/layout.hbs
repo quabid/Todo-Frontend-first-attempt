@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    {{> menu}}
     <div class="grid-container fluid" style="position: absolute;top:25%;width:100%;">
         <div class="grid-x grid-margin-x align-center">
             {{{content}}}
@@ -17,6 +18,10 @@
     </div>
     <script src="js/vendor.js"></script>
     <script src="js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
 </body>
+<link rel="stylesheet" href="css/style.css">
 
 </html>
