@@ -17,11 +17,11 @@
     </div>
 
     {{#if error}}
-    <div class="cell auto">
-        <label>
+    <div class="cell auto div-error">
+        <label class="div-error-label">
             <h3>Error</h3>
         </label>
-        <input type="text" placeholder="Error" value="{{error}}" readonly aria-readonly="true">
+        <input class="dev-error-input" type="text" placeholder="Error" value="{{error}}" readonly aria-readonly="true">
     </div>
     {{/if}}
 

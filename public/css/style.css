@@ -1,13 +1,34 @@
 .no-js .top-bar {
-  display: none;
+	display: none;
 }
 
 @media screen and (min-width: 40em) {
-  .no-js .top-bar {
-    display: block;
-  }
+	.no-js .top-bar {
+		display: block;
+	}
 
-  .no-js .title-bar {
-    display: none;
-  }
+	.no-js .title-bar {
+		display: none;
+	}
+}
+
+.div-error .div-error-label {
+	border-color: rgb(235, 42, 42);
+	background-color: rgba(244, 200, 200, 0.6);
+	color: rgb(211, 90, 90);
+	text-align: center;
+	border-radius: 10px;
+}
+
+.div-error .div-error-label h3 {
+	font-weight: bolder;
+}
+
+.div-error input {
+	border: none;
+	border-color: rgb(235, 42, 42);
+	color: rgb(239, 70, 70);
+	background-color: rgba(244, 200, 200, 0.6);
+	border-radius: 10px;
+	font-weight: bolder;
 }
