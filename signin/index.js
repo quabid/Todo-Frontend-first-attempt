@@ -6,7 +6,7 @@ const signin = {
 			method: 'POST',
 			path: '/signin',
 			config: {
-				// auth: 'simple',
+				auth: 'simple',
 				validate: {
 					payload: Joi.object({
 						email: Joi.string().email().required(),
@@ -20,16 +20,14 @@ const signin = {
 				}
 			},
 			handler: (req, res) => {
-				return req.payload;
+				const { email, password } = req.payload;
+				return res.view('landing/home', { title: 'Signed In', user: req.auth.credentials });
 			}
 		});
 
 		server.route({
 			method: 'GET',
 			path: '/signin',
-			config: {
-				// auth: 'simple'
-			},
 			handler: (req, res) => {
 				return res.view('landing/signin', { title: 'Sign In' });
 			}
