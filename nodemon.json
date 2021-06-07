@@ -3,11 +3,7 @@
     "ignore": [
         "*.test.js",
         "fixtures/*",
-        "node_modulesz`"
+        "node_modules"
     ],
-    "execMap": {
-        "rb": "ruby",
-        "pde": "processing --sketch={{pwd}} --run"
-    },
     "ext": "js,json,html,css,hbs,md"
 }
