@@ -7,7 +7,7 @@ const user = {
 				auth: 'session'
 			},
 			handler: (req, res) => {
-				return res.view('user/page', { title: 'User' });
+				return res.view('user/dashboard', { title: 'User' });
 			}
 		});
 	},
