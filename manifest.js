@@ -5,6 +5,7 @@ import auth from './auth/index.js';
 import home from './home/index.js';
 import signup from './signup/index.js';
 import signin from './signin/index.js';
+import signout from './signout/index.js';
 import user from './user/index.js';
 import Path from 'path';
 
@@ -39,7 +40,12 @@ const manifest = {
 					layout: true,
 					layoutPath: 'views/layouts',
 					partialsPath: 'views/partials',
-					helpersPath: 'views/helpers'
+					helpersPath: 'views/helpers',
+					context: (request) => {
+						return {
+							credentials: request.auth.credentials
+						};
+					}
 				}
 			},
 			{
@@ -53,6 +59,9 @@ const manifest = {
 			},
 			{
 				plugin: user
+			},
+			{
+				plugin: signout
 			}
 		]
 	}

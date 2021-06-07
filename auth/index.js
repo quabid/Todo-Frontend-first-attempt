@@ -14,10 +14,10 @@ const auth = {
 				isSecure: false
 			},
 			redirectTo: '/signin',
-			appendNext: true,
-			validateFunc: async (request, session) => {
+			appendNext: true
+			/* validateFunc: async (request, session) => {
 				return { valid: true, credentials: {} };
-			}
+			} */
 		});
 		// server.auth.default('session');
 	},
