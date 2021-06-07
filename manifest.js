@@ -5,6 +5,7 @@ import auth from './auth/index.js';
 import home from './home/index.js';
 import signup from './signup/index.js';
 import signin from './signin/index.js';
+import user from './user/index.js';
 import Path from 'path';
 
 dotenv.config();
@@ -49,6 +50,9 @@ const manifest = {
 			},
 			{
 				plugin: signup
+			},
+			{
+				plugin: user
 			}
 		]
 	}

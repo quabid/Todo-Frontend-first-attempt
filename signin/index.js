@@ -21,6 +21,14 @@ const signin = {
 			},
 			handler: (req, res) => {
 				const { email, password } = req.payload;
+				console.log(req.auth.credentials);
+				if (req.auth.isAuthenticated) {
+					req.cookieAuth.set({
+						userId: req.auth.credentials.id,
+						userRev: req.auth.credentials.rev,
+						userToken: req.auth.credentials.token
+					});
+				}
 				return res.view('landing/home', { title: 'Signed In', user: req.auth.credentials });
 			}
 		});
