@@ -7,7 +7,8 @@ const user = {
 				auth: 'session'
 			},
 			handler: (req, res) => {
-				return res.view('user/dashboard', { title: 'User' });
+				console.log(`User's Dashboard ${JSON.stringify(req.auth.credentials)}`);
+				return res.view('user/dashboard', { title: 'Dashboard', user: req.auth.credentials.userEmail });
 			}
 		});
 	},

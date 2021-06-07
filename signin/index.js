@@ -21,15 +21,14 @@ const signin = {
 			},
 			handler: (req, res) => {
 				const { email, password } = req.payload;
-				console.log(req.auth.credentials);
+				console.log(`User Credentials:${JSON.stringify(req.auth.credentials)}`);
 				if (req.auth.isAuthenticated) {
 					req.cookieAuth.set({
-						userId: req.auth.credentials.id,
-						userRev: req.auth.credentials.rev,
-						userToken: req.auth.credentials.token
+						userToken: req.auth.credentials.token,
+						userEmail: req.auth.credentials.email
 					});
 				}
-				return res.view('landing/home', { title: 'Signed In', user: req.auth.credentials });
+				return res.view('user/dashboard', { title: 'Signed In', user: req.auth.credentials.email });
 			}
 		});
 

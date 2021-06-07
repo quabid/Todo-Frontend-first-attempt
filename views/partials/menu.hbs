@@ -6,9 +6,9 @@
 <div class="top-bar" id="example-menu">
     <div class="top-bar-left align-left">
         <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Site Title</li>
+            <li class="menu-text">{{#if user}} {{user}} {{else}}Todo App{{/if}}</li>
             <li>
-            <li><a href="/user">User</a></li>
+            <li><a href="/user">Dashboard</a></li>
             <li><a href="/signout">Sign Out</a></li>
             </li>
         </ul>
@@ -24,7 +24,7 @@
 <div class="top-bar" id="example-menu">
     <div class="top-bar-left align-left">
         <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Site Title</li>
+            <li class="menu-text">Todo App</li>
             <li>
                 <a href="/">Home</a>
                 <ul class="menu vertical">
