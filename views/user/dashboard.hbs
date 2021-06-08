@@ -1,35 +1,24 @@
-<ul class="tab" data-responsive-accordion-tabs="accordion large-tabs" id="dashboard-tabs"
-    style="width:100%;margin-top:1rem;">
+<ul class="accordion" data-responsive-accordion-tabs="accordion large-tabs" data-allow-all-closed="true"
+    id="dashboard-tabs" style="width:100%;margin-top:1rem;">
     <li class="tabs-title is-active">
         <a href="#todos" aria-selected="true">Todos</a>
     </li>
-    <li class="tabs-title"><a href="#profile">Profile</a></li>
+    <li class="tabs-title">
+        <a href="#addtodo" aria-selected="true">Add Todo</a>
+    </li>
+    <li class="tabs-title"><a href="#settings">Settings</a></li>
 </ul>
 
 <div class="tabs-content" data-tabs-content="dashboard-tabs" style="width:100%;">
-    <div class="tabs-panel is-active" id="todo" style="width:100%;">
-        <ul class="accordion" data-accordion data-allow-all-closed="true" style="width:100%;">
-            <li class="accordion-item is-active" data-accordion-item style="width:100%;">
-                <a href="#" class="accordion-title">Accordion 1</a>
-                <div class="accordion-content" data-tab-content>
-                    Panel 1. I'm open because I'm loaded that way, but you can't close me
-                </div>
-            </li>
-            <li class="accordion-item" data-accordion-item style="width:100%;">
-                <a href="#" class="accordion-title">Accordion 2, you can't open me.</a>
-                <div class="accordion-content" data-tab-content>
-                    Panel 2. Lorem ipsum dolor
-                </div>
-            </li>
-            <li class="accordion-item" data-accordion-item style="width:100%;">
-                <a href="#" class="accordion-title">Accordion 3, you can't open me.</a>
-                <div class="accordion-content" data-tab-content>
-                    Panel 3. Lorem ipsum dolor
-                </div>
-            </li>
-        </ul>
+    <div class="tabs-panel is-active" id="todos" style="width:100%;">
+        {{>todos}}
     </div>
-    <div class="tabs-panel" id="profile" style="width:100%;">
-        <p>Profile</p>
+
+    <div class="tabs-panel" id="addtodo" style="width:100%;">
+        {{>addtodo}}
+    </div>
+
+    <div class="tabs-panel" id="settings" style="width:100%;">
+        {{>settings}}
     </div>
 </div>

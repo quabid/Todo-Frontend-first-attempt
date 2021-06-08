@@ -28,7 +28,13 @@ const signin = {
 						userEmail: req.auth.credentials.email
 					});
 				}
-				return res.view('user/dashboard', { title: 'Signed In', user: req.auth.credentials.email });
+				return res.view('user/dashboard', {
+					title: 'Signed In',
+					user: {
+						email: req.auth.credentials.userEmail,
+						token: req.auth.credentials.userToken
+					}
+				});
 			}
 		});
 

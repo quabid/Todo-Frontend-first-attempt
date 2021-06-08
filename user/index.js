@@ -8,7 +8,13 @@ const user = {
 			},
 			handler: (req, res) => {
 				console.log(`User's Dashboard ${JSON.stringify(req.auth.credentials)}`);
-				return res.view('user/dashboard', { title: 'Dashboard', user: req.auth.credentials.userEmail });
+				return res.view('user/dashboard', {
+					title: 'Dashboard',
+					user: {
+						email: req.auth.credentials.userEmail,
+						token: req.auth.credentials.userToken
+					}
+				});
 			}
 		});
 	},
