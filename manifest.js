@@ -7,6 +7,7 @@ import signup from './signup/index.js';
 import signin from './signin/index.js';
 import signout from './signout/index.js';
 import user from './user/index.js';
+import addtodo from './addtodo/index.js';
 import Path from 'path';
 
 dotenv.config();
@@ -62,6 +63,9 @@ const manifest = {
 			},
 			{
 				plugin: signout
+			},
+			{
+				plugin: addtodo
 			}
 		]
 	}
